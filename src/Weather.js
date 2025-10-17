@@ -6,15 +6,24 @@ export default function Weather() {
     <div className="weather">
       <div className="row">
         <div className="col-9">
-          <input type="search" placeholder="Enter a city..." />
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            className="form-control"
+            autoFocus
+          />
         </div>
 
         <div className="col-3">
-          <input type="submit" value="Search" className="btn btn-primary" />
+          <input
+            type="submit"
+            value="Search"
+            className="btn btn-primary w-100"
+          />
         </div>
       </div>
       <h1>Rome</h1>
-      <ul>
+      <ul className="current-info">
         <li>Friday 5:00pm</li>
         <li>Crescent moon</li>
       </ul>
@@ -24,7 +33,8 @@ export default function Weather() {
             src="https://www.gstatic.com/weather/conditions/v1/svg/clear_night_light.svg"
             alt="icon-image"
           />
-          6°C
+          <span className="temperature">6</span>
+          <span className="unit">°C</span>
         </div>
         <div className="col-6">
           <ul>

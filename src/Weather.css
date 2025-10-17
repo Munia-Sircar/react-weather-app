@@ -1,5 +1,39 @@
 .weather {
-  margin: 20px;
+  margin: 30px auto;
   border: 1px solid #dadde1;
-  padding: 10px;
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 10px;
+}
+.weather h1 {
+  font-size: 35px;
+  color: rgb(97, 97, 97);
+  margin: 10px 0 0 0;
+}
+
+.weather ul {
+  list-style: none;
+  color: rgb(97, 97, 97);
+  font-size: 18px;
+}
+
+.weather .current-info {
+  padding-left: 0rem;
+}
+
+.weather img {
+  position: relative;
+  bottom: 18px;
+  margin-right: 10px;
+}
+
+.weather .temperature {
+  font-weight: bold;
+  font-size: 64px;
+}
+
+.weather .unit {
+  font-size: 20px;
+  position: relative;
+  bottom: 34px;
 }
