@@ -14,17 +14,17 @@ export default function Weather() {
         </div>
       </div>
       <h1>Rome</h1>
+      <ul>
+        <li>Friday 5:00pm</li>
+        <li>Crescent moon</li>
+      </ul>
       <div className="row">
         <div className="col-6">
-          <ul>
-            <li>
-              <img
-                src="https://www.gstatic.com/weather/conditions/v1/svg/clear_night_light.svg"
-                alt="icon-image"
-              />
-            </li>
-            <li>6°C</li>
-          </ul>
+          <img
+            src="https://www.gstatic.com/weather/conditions/v1/svg/clear_night_light.svg"
+            alt="icon-image"
+          />
+          6°C
         </div>
         <div className="col-6">
           <ul>
