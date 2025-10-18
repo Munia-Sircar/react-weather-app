@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+import Time from "./Time";
 
 export default function Weather() {
   let [ready, setReady] = useState(false);
@@ -15,7 +16,7 @@ export default function Weather() {
       iconUrl: response.data.condition.icon_url,
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
-      time: response.data.time,
+      date: new Date(response.data.time * 1000),
     });
 
     setReady(true);
@@ -44,7 +45,7 @@ export default function Weather() {
         </div>
         <h1>{weather.city}</h1>
         <ul className="current-info">
-          <li>Friday 5:00pm</li>
+          <Time date={weather.date} />
           <li className="text-capitalize">{weather.description}</li>
         </ul>
         <div className="row">
@@ -63,7 +64,7 @@ export default function Weather() {
       </div>
     );
   } else {
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=Dhaka&key=28d0bff0ffaa52b09e33da6etode543b&units=metric`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=Winnipeg&key=28d0bff0ffaa52b09e33da6etode543b&units=metric`;
     axios.get(apiUrl).then(showWeather);
     return "Loading..";
   }
