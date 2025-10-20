@@ -7,6 +7,7 @@ import WeatherInfo from "./WeatherInfo";
 export default function Weather() {
   let [ready, setReady] = useState(false);
   let [weather, setWeather] = useState({});
+  let [city, setCity] = useState("Winnipeg");
 
   function showWeather(response) {
     console.log(response);
@@ -19,31 +20,32 @@ export default function Weather() {
       wind: response.data.wind.speed,
       date: new Date(response.data.time * 1000),
     });
-
     setReady(true);
   }
 
   if (ready) {
     return (
       <div className="weather">
-        <div className="row">
-          <div className="col-9">
-            <input
-              type="search"
-              placeholder="Enter a city..."
-              className="form-control"
-              autoFocus
-            />
-          </div>
+        <form>
+          <div className="row">
+            <div className="col-9">
+              <input
+                type="search"
+                placeholder="Enter a city..."
+                className="form-control"
+                autoFocus
+              />
+            </div>
 
-          <div className="col-3">
-            <input
-              type="submit"
-              value="Search"
-              className="btn btn-primary w-100"
-            />
+            <div className="col-3">
+              <input
+                type="submit"
+                value="Search"
+                className="btn btn-primary w-100"
+              />
+            </div>
           </div>
-        </div>
+        </form>
         <WeatherInfo data={weather} />
       </div>
     );
