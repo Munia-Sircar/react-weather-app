@@ -7,7 +7,6 @@ import WeatherInfo from "./WeatherInfo";
 export default function Weather() {
   let [ready, setReady] = useState(false);
   let [weather, setWeather] = useState({});
-  let [city, setCity] = useState("Winnipeg");
 
   function showWeather(response) {
     console.log(response);
