@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
-import Time from "./Time";
+
+import WeatherInfo from "./WeatherInfo";
 
 export default function Weather() {
   let [ready, setReady] = useState(false);
@@ -43,24 +44,7 @@ export default function Weather() {
             />
           </div>
         </div>
-        <h1>{weather.city}</h1>
-        <ul className="current-info">
-          <Time date={weather.date} />
-          <li className="text-capitalize">{weather.description}</li>
-        </ul>
-        <div className="row">
-          <div className="col-6">
-            <img src={weather.iconUrl} alt="icon-image" />
-            <span className="temperature">{Math.round(weather.temp)}</span>
-            <span className="unit">°C</span>
-          </div>
-          <div className="col-6">
-            <ul>
-              <li>Humidity: {weather.humidity}%</li>
-              <li>Wind: {Math.round(weather.wind)}km/h</li>
-            </ul>
-          </div>
-        </div>
+        <WeatherInfo data={weather} />
       </div>
     );
   } else {
