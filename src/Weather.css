@@ -9,6 +9,7 @@
   font-size: 35px;
   color: rgb(97, 97, 97);
   margin: 20px 0 0 0;
+  margin-bottom: 5px;
 }
 
 .weather ul {
@@ -18,7 +19,7 @@
 }
 
 .weather .current-info {
-  padding-left: 0rem;
+  padding-left: 0.2rem;
 }
 
 .weather img {

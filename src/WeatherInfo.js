@@ -10,7 +10,6 @@ export default function WeatherInfo(props) {
         <Time date={props.data.date} />
         <li className="text-capitalize">{props.data.description}</li>
       </ul>
-
       <div className="row">
         <div className="col-6">
           <img src={props.data.iconUrl} alt="icon-image" />
