@@ -7,14 +7,21 @@ export default function App() {
       <div className="container">
         <Weather />
         <footer>
-          This project is created by Munia Sircar, open-sourced on{" "}
+          This project is created by{" "}
+          <a
+            href="https://github.com/Munia-Sircar"
+            target="_blank"
+            rel="noreferrer">
+            Munia Sircar
+          </a>
+          🌹open-sourced on{" "}
           <a
             href="https://github.com/Munia-Sircar/react-weather-app"
             target="_blank"
             rel="noreferrer">
             GitHub
           </a>{" "}
-          and hosted on{" "}
+          & hosted on{" "}
           <a
             href="https://moon-weather-app-react.netlify.app/"
             target="_blank"
