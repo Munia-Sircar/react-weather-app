@@ -1,5 +1,6 @@
 import React from "react";
 import Time from "./Time";
+import WeatherUnits from "./WeatherUnits";
 
 export default function WeatherInfo(props) {
   return (
@@ -9,11 +10,11 @@ export default function WeatherInfo(props) {
         <Time date={props.data.date} />
         <li className="text-capitalize">{props.data.description}</li>
       </ul>
+
       <div className="row">
         <div className="col-6">
           <img src={props.data.iconUrl} alt="icon-image" />
-          <span className="temperature">{Math.round(props.data.temp)}</span>
-          <span className="unit">°C</span>
+          <WeatherUnits data={props.data.temp} />
         </div>
         <div className="col-6">
           <ul>
