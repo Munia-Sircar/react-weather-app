@@ -1,0 +1,13 @@
+.WeatherForecast {
+  text-align: center;
+  font-size: 20px;
+}
+
+.forecast-temp-min {
+  margin-left: 8px;
+  opacity: 0.7;
+}
+
+.forecast-icon {
+  font-size: 30px;
+}
