@@ -1,6 +1,14 @@
 import React from "react";
 
 export default function WeatherForecastDay(props) {
+  function forecastDay() {
+    let date = new Date(props.data.time * 1000);
+    let day = date.getDay();
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+    return days[day];
+  }
+
   function maxTemp() {
     let max = Math.round(props.data.temperature.maximum);
     return max;
@@ -12,7 +20,7 @@ export default function WeatherForecastDay(props) {
 
   return (
     <div>
-      <div className="forecast-day">{props.data.time}</div>
+      <div className="forecast-day">{forecastDay()}</div>
 
       <div className="forecast-icon">
         <img
