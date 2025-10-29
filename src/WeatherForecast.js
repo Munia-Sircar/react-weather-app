@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./WeatherForecast.css";
 import axios from "axios";
 
-export default function WeatherForecast() {
+export default function WeatherForecast(props) {
   let [loaded, setLoaded] = useState(false);
   let [forecast, setForecast] = useState(null);
 
@@ -34,7 +34,7 @@ export default function WeatherForecast() {
       </div>
     );
   } else {
-    let city = "Dhaka";
+    let city = props.forecastCity.city;
     let apiKey = "28d0bff0ffaa52b09e33da6etode543b";
     let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
 

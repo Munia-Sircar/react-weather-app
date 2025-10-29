@@ -10,7 +10,6 @@ export default function Weather() {
   let [weather, setWeather] = useState({});
   let [city, setCity] = useState("Winnipeg");
   function showWeather(response) {
-    console.log(response);
     setWeather({
       temp: response.data.temperature.current,
       city: response.data.city,
@@ -62,7 +61,7 @@ export default function Weather() {
           </div>
         </form>
         <WeatherInfo data={weather} />
-        <WeatherForecast />
+        <WeatherForecast forecastCity={weather} />
       </div>
     );
   } else {
