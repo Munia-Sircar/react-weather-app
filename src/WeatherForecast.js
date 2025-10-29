@@ -17,7 +17,11 @@ export default function WeatherForecast() {
         <div className="forecast-day">{forecast[0].time}</div>
 
         <div className="forecast-icon">
-          <img src={forecast[0].condition.icon_url} alt="icon-image" />
+          <img
+            src={forecast[0].condition.icon_url}
+            alt="icon-image"
+            className="forecast-image"
+          />
         </div>
         <div className="forecast-temp">
           <span className="forecast-temp-max">
@@ -30,7 +34,7 @@ export default function WeatherForecast() {
       </div>
     );
   } else {
-    let city = "Tokyo";
+    let city = "Dhaka";
     let apiKey = "28d0bff0ffaa52b09e33da6etode543b";
     let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
 
