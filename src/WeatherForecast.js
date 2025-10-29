@@ -3,9 +3,7 @@ import "./WeatherForecast.css";
 import axios from "axios";
 
 export default function WeatherForecast() {
-  function showResponse(response) {
-    console.log(response);
-  }
+  function showResponse(response) {}
 
   let city = "Tokyo";
   let apiKey = "28d0bff0ffaa52b09e33da6etode543b";
