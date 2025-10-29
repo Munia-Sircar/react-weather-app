@@ -25,7 +25,6 @@
 .weather img {
   position: relative;
   bottom: 18px;
-  margin-right: 10px;
 }
 
 .weather .temperature {
