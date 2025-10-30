@@ -22,6 +22,16 @@
   padding-left: 0.2rem;
 }
 
+.current-state {
+  position: relative;
+  top: 20px;
+}
+
+.col-6 {
+  position: relative;
+  right: 14px;
+}
+
 .weather img {
   position: relative;
   bottom: 18px;

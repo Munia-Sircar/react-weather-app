@@ -1,6 +1,7 @@
 import React from "react";
 import Time from "./Time";
 import WeatherUnits from "./WeatherUnits";
+import "./Weather.css";
 
 export default function WeatherInfo(props) {
   return (
@@ -16,7 +17,7 @@ export default function WeatherInfo(props) {
           <WeatherUnits data={props.data.temp} />
         </div>
         <div className="col-6">
-          <ul>
+          <ul className="current-state">
             <li>Humidity: {props.data.humidity}%</li>
             <li>Wind: {Math.round(props.data.wind)}km/h</li>
           </ul>
