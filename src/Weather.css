@@ -1,9 +1,10 @@
 .weather {
   margin: 30px auto;
   border: 1px solid #dadde1;
-  padding: 20px;
+  padding: 30px 20px;
   max-width: 600px;
   border-radius: 10px;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
 }
 .weather h1 {
   font-size: 35px;
