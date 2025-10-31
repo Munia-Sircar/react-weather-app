@@ -5,12 +5,14 @@
 
 .forecast-temp-max {
   font-weight: bold;
+  color: #c61c1e;
 }
 
 .forecast-temp-min {
   margin-left: 8px;
   opacity: 0.7;
   font-weight: 500;
+  color: #c61c1e;
 }
 
 .forecast-icon {
